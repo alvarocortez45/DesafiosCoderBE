@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Raqueta Head Radical MP",
+    "price": "$45000",
+    "thumbnail": "https://img.tenniswarehouse-europe.com/watermark/rs.php?path=BPSTTO-1.jpg&nw=296",
+    "id": 1
+  },
+  {
+    "title": "Raqueta Prince Phantom 100P",
+    "price": "$42500",
+    "thumbnail": "https://img.tenniswarehouse-europe.com/watermark/rs.php?path=BPSTTO-1.jpg&nw=296",
+    "id": 2
+  },
+  {
+    "title": "Raqueta Wilson Clash 100",
+    "price": "$49000",
+    "thumbnail": "https://img.tenniswarehouse-europe.com/watermark/rs.php?path=BPSTTO-1.jpg&nw=296",
+    "id": 3
+  }
+]
