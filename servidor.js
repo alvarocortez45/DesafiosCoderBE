@@ -106,9 +106,23 @@ class Contenedor{
         }
     }
 
+    async getRandom () { 
+        try {
+            let data = await fs.promises.readFile('./' + this.fileName)
+            const dataObj = JSON.parse(data)
+            const randomP = dataObj[Math.round(Math.random() *( dataObj.length - 1 ))]
+            
+            return randomP}
+        catch (error) {
+            console.log(error)
+        }
 }
 
-const test = async () => {
+}
+
+const contProductos = new Contenedor('productos.txt')
+
+/*const test = async () => {
     const contProductos = new Contenedor('productos.txt')
     const id = await contProductos.save({
       title: 'Raqueta Wilson Clash 100',
@@ -116,23 +130,23 @@ const test = async () => {
       thumbnail: 'https://img.tenniswarehouse-europe.com/watermark/rs.php?path=BPSTTO-1.jpg&nw=296'
     })
     console.log(id)
-    /*const mostrarTodos=await contProductos.getAll()
+    const mostrarTodos=await contProductos.getAll()
     console.log(mostrarTodos)
     contProductos.deleteAll()
     contProductos.deleteById(1)
     /*const mostrarId= await contProductos.getById(1)
-    console.log(mostrarId)*/
+    console.log(mostrarId)
   }
 
 
-test()
+test()*/
 
-app.get('/productos',( req, res) =>{
-    let productos = contenedor.getAll()
-    !productos ? res.status(404).send('Producto NO Encontrado') : res.send(productos)
+app.get('/productos',async ( req, res) =>{
+    let productos = await contenedorProducts.getAll()
+    res.send(productos)
 })
 
-app.get('/productoRandom',( req, res) =>{
-    let random = JSON.stringify(contenedor.getRandom())
+app.get('/productoRandom',async ( req, res) =>{
+    let random = await JSON.stringify(contenedor.getRandom())
     !random ? res.status(404).send('Producto Encontrado') : res.send(random)
 })
