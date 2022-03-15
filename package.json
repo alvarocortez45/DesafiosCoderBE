@@ -1,7 +1,6 @@
 {
   "name": "desafio3",
   "version": "1.0.0",
-  "description": "",
   "main": "servidor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvarocortez45/DesafiosCoderBE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alvarocortez45/DesafiosCoderBE/issues"
+  },
+  "homepage": "https://github.com/alvarocortez45/DesafiosCoderBE#readme",
+  "description": ""
 }
