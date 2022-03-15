@@ -142,11 +142,11 @@ const contProductos = new Contenedor('productos.txt')
 test()*/
 
 app.get('/productos',async ( req, res) =>{
-    let productos = await contenedorProducts.getAll()
+    let productos = await contProductos.getAll()
     res.send(productos)
 })
 
 app.get('/productoRandom',async ( req, res) =>{
-    let random = await JSON.stringify(contenedor.getRandom())
+    let random = await JSON.stringify(contProductos.getRandom())
     !random ? res.status(404).send('Producto Encontrado') : res.send(random)
 })
